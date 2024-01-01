@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_mrz_scanner/flutter_mrz_scanner.dart';
 import 'package:inapp_flutter_kyc/inapp_flutter_kyc.dart';
 
 void main() {
@@ -367,7 +366,11 @@ class _ShowScannedTextState extends State<ShowScannedText> {
               // ),
               const Text(
                 "Extracted Text",
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(
+                  fontSize: 20,
+                  decoration: TextDecoration.underline,
+                  decorationThickness: 2,
+                ),
               ),
               const SizedBox(
                 height: 20,
