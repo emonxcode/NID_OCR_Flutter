@@ -345,28 +345,28 @@ class _ShowScannedTextState extends State<ShowScannedText> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Visibility(
-              visible: widget.keyNvalue != null,
-              child: Expanded(
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: formFields.length,
-                  itemBuilder: (context, index) {
-                    FormFieldData fieldData = formFields[index];
-                    return Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: TextFormField(
-                        initialValue: fieldData.value,
-                        decoration: InputDecoration(labelText: fieldData.label),
-                        onChanged: (value) {
-                          formFields[index].value = value;
-                        },
-                      ),
-                    );
-                  },
-                ),
-              ),
-            ),
+            // Visibility(
+            //   visible: widget.keyNvalue != null,
+            //   child: Expanded(
+            //     child: ListView.builder(
+            //       shrinkWrap: true,
+            //       itemCount: formFields.length,
+            //       itemBuilder: (context, index) {
+            //         FormFieldData fieldData = formFields[index];
+            //         return Padding(
+            //           padding: const EdgeInsets.all(16),
+            //           child: TextFormField(
+            //             initialValue: fieldData.value,
+            //             decoration: InputDecoration(labelText: fieldData.label),
+            //             onChanged: (value) {
+            //               formFields[index].value = value;
+            //             },
+            //           ),
+            //         );
+            //       },
+            //     ),
+            //   ),
+            // ),
             const Text(
               "Extracted Text",
               style: TextStyle(fontSize: 20),
