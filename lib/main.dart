@@ -340,54 +340,59 @@ class _ShowScannedTextState extends State<ShowScannedText> {
       ),
       body: GestureDetector(
         onTap: () {},
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Visibility(
-            //   visible: widget.keyNvalue != null,
-            //   child: Expanded(
-            //     child: ListView.builder(
-            //       shrinkWrap: true,
-            //       itemCount: formFields.length,
-            //       itemBuilder: (context, index) {
-            //         FormFieldData fieldData = formFields[index];
-            //         return Padding(
-            //           padding: const EdgeInsets.all(16),
-            //           child: TextFormField(
-            //             initialValue: fieldData.value,
-            //             decoration: InputDecoration(labelText: fieldData.label),
-            //             onChanged: (value) {
-            //               formFields[index].value = value;
-            //             },
-            //           ),
-            //         );
-            //       },
-            //     ),
-            //   ),
-            // ),
-            const Text(
-              "Extracted Text",
-              style: TextStyle(fontSize: 20),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: Text("Name: ${extractNameFromBottom(widget.scannedText)}"),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: Text(
-                  "NID NO: ${extractNidNumber_WithSpace(widget.scannedText)}"),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: Text("DOB: ${extractDateFormat(widget.scannedText)}"),
-            ),
-          ],
+        child: SizedBox(
+          width: MediaQuery.sizeOf(context).width,
+          height: MediaQuery.sizeOf(context).height,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // Visibility(
+              //   visible: widget.keyNvalue != null,
+              //   child: Expanded(
+              //     child: ListView.builder(
+              //       shrinkWrap: true,
+              //       itemCount: formFields.length,
+              //       itemBuilder: (context, index) {
+              //         FormFieldData fieldData = formFields[index];
+              //         return Padding(
+              //           padding: const EdgeInsets.all(16),
+              //           child: TextFormField(
+              //             initialValue: fieldData.value,
+              //             decoration: InputDecoration(labelText: fieldData.label),
+              //             onChanged: (value) {
+              //               formFields[index].value = value;
+              //             },
+              //           ),
+              //         );
+              //       },
+              //     ),
+              //   ),
+              // ),
+              const Text(
+                "Extracted Text",
+                style: TextStyle(fontSize: 20),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child:
+                    Text("Name: ${extractNameFromBottom(widget.scannedText)}"),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child: Text(
+                    "NID NO: ${extractNidNumber_WithSpace(widget.scannedText)}"),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child: Text("DOB: ${extractDateFormat(widget.scannedText)}"),
+              ),
+            ],
+          ),
         ),
       ),
     );
