@@ -331,12 +331,7 @@ class _ShowScannedTextState extends State<ShowScannedText> {
     //print(widget.scannedText.toString());
     return Scaffold(
       appBar: AppBar(
-        title: TextButton(
-          onPressed: () {
-            print("asdfasdf");
-          },
-          child: const Text("Sccaned Text"),
-        ),
+        title: const Text("Scanned Text"),
       ),
       body: GestureDetector(
         onTap: () {},
